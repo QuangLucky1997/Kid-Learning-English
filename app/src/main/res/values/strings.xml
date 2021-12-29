@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KidLearningApp2021</string>
+    <string name="learning_fun_with_abc_number_colors_game_for_kids">Learning Fun \n With ABC,Number,\n Colors Game for Kids</string>
+    <string name="share_app">Share app</string>
+    <string name="play_app">Play game</string>
+    <string name="rate_app">Rate app</string>
+    <string name="learn">Learn</string>
+    <string name="word">Find the Word</string>
+    <string name="find_the_picture">Find the Picture</string>
+</resources>
