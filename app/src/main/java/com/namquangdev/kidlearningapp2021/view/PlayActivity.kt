@@ -1,12 +1,20 @@
 package com.namquangdev.kidlearningapp2021.view
 
+import android.app.Dialog
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.*
+import android.widget.ImageView
 import com.namquangdev.kidlearningapp2021.R
 import com.namquangdev.kidlearningapp2021.`interface`.ClickListener
 import com.namquangdev.kidlearningapp2021.adapter.CollectionExerciseAdapter
 import com.namquangdev.kidlearningapp2021.model.Collection
 import kotlinx.android.synthetic.main.activity_play.*
+import kotlinx.android.synthetic.main.dialog.*
 
 class PlayActivity : AppCompatActivity(), ClickListener {
     private lateinit var adapterCollection: CollectionExerciseAdapter
@@ -40,7 +48,7 @@ class PlayActivity : AppCompatActivity(), ClickListener {
         listCollectionData.add(Collection(R.drawable.dog, "Animals", R.color.green))
         listCollectionData.add(Collection(R.drawable.abc, "Alphabet", R.color.yellow))
         listCollectionData.add(Collection(R.drawable.one, "Numbers", R.color.red))
-        listCollectionData.add(Collection(R.drawable.trans, "Transport", R.color.orange))
+        listCollectionData.add(Collection(R.drawable.transport, "Transport", R.color.orange))
         listCollectionData.add(Collection(R.drawable.fruits, "Fruits", R.color.purple))
         listCollectionData.add(Collection(R.drawable.ves, "Vegetable", R.color.blue2))
         listCollectionData.add(Collection(R.drawable.school, "School", R.color.blue))
@@ -52,6 +60,23 @@ class PlayActivity : AppCompatActivity(), ClickListener {
     }
 
     override fun onClick(collection: Collection) {
+        showDialogChosen(collection)
+    }
 
+
+    private fun showDialogChosen(collection: Collection) {
+        val viewDialog = View.inflate(this, R.layout.dialog, null)
+        val dialog = Dialog(this, R.style.MyAlertDialogStyle)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        val window = dialog.window
+        window!!.setLayout(
+            WindowManager.LayoutParams.WRAP_CONTENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
+        window.setGravity(Gravity.CENTER)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(viewDialog)
+        dialog.avt_dialog.setImageResource(collection.img)
+        dialog.show()
     }
 }

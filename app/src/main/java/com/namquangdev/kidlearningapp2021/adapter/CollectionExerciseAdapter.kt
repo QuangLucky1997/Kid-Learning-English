@@ -1,6 +1,7 @@
 package com.namquangdev.kidlearningapp2021.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,8 @@ class CollectionExerciseAdapter(
 
     override fun onBindViewHolder(holder: CollectionHolder, position: Int) {
         val listData = listCollection[position]
+        Log.d("000000000", "showDialogChosen: ${listData.img}")
+
         holder.itemView.img_collection.setImageResource(listData.img)
         holder.itemView.text_collection.text = listData.nameCard
         holder.itemView.cardViewText.setCardBackgroundColor(ContextCompat.getColor(context, listData.colors))

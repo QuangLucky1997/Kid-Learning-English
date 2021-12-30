@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog"
+    android:layout_margin="@dimen/dp_40"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/avt_dialog"
-        android:layout_width="@dimen/dp_120"
-        android:layout_height="@dimen/dp_100"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_10"
         android:scaleType="fitXY"
@@ -15,6 +17,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_learn"
+        android:alpha="0.9"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
         android:layout_below="@+id/avt_dialog"
@@ -29,11 +32,11 @@
 
             <ImageView
                 android:id="@+id/icon_learn"
-                android:src="@drawable/ab2"
-                android:scaleType="fitXY"
-                android:layout_centerInParent="true"
                 android:layout_width="@dimen/dp_40"
-                android:layout_height="@dimen/dp_40" />
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/graduation" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,6 +52,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_find"
+        android:alpha="0.9"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
         android:layout_alignParentEnd="true"
@@ -83,6 +87,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_word"
+        android:alpha="0.9"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
         android:layout_alignParentStart="true"
@@ -98,21 +103,54 @@
 
             <ImageView
                 android:id="@+id/icon_word"
-                android:src="@drawable/picture"
-                android:scaleType="fitXY"
-                android:layout_centerInParent="true"
                 android:layout_width="@dimen/dp_40"
-                android:layout_height="@dimen/dp_40" />
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ab2" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/icon_word"
+                android:layout_centerHorizontal="true"
                 android:text="@string/word"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/icon_word" />
+                android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_keyboard"
+        android:alpha="0.9"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/card_find"
+        android:layout_margin="50dp"
+        android:elevation="@dimen/dp_2"
+        app:cardBackgroundColor="#474747"
+        app:cardCornerRadius="@dimen/dp_20">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_keyboard"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/keyboard" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/icon_keyboard"
+                android:layout_centerHorizontal="true"
+                android:text="@string/writing"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>

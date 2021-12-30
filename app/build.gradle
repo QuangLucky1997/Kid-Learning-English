@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -36,14 +37,14 @@ dependencies {
 
     //slider library
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
-    
 
 
 
 
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
 
 
-
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
