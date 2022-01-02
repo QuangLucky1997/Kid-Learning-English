@@ -1,18 +1,15 @@
-package com.namquangdev.kidlearningapp2021.view
+package com.namquangdev.kidlearningapp2021.ui.base.main.ui.main.view
 
 import android.app.Dialog
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.ImageView
 import com.namquangdev.kidlearningapp2021.R
 import com.namquangdev.kidlearningapp2021.`interface`.ClickListener
 import com.namquangdev.kidlearningapp2021.adapter.CollectionExerciseAdapter
-import com.namquangdev.kidlearningapp2021.model.Collection
+import com.namquangdev.kidlearningapp2021.data.model.Collection
 import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.dialog.*
 

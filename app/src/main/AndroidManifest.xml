@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KidLearningApp2021">
         <activity
-            android:name=".view.PlayActivity"
+            android:name="com.namquangdev.kidlearningapp2021.ui.base.main.ui.main.view.PlayActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="true" />
         <activity
-            android:name=".view.SplashActivity"
+            android:name="com.namquangdev.kidlearningapp2021.ui.base.main.ui.main.view.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>

@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.namquangdev.kidlearningapp2021.R
 import com.namquangdev.kidlearningapp2021.`interface`.ClickListener
-import com.namquangdev.kidlearningapp2021.model.Collection
+import com.namquangdev.kidlearningapp2021.data.model.Collection
 import kotlinx.android.synthetic.main.custom_recycle_view_learning.view.*
 
 class CollectionExerciseAdapter(

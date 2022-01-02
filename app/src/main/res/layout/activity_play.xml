@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PlayActivity">
+    tools:context=".ui.base.main.ui.main.view.PlayActivity">
 
 
     <androidx.cardview.widget.CardView

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "188084953060",
+    "firebase_url": "https://kid-learning-english-default-rtdb.firebaseio.com",
+    "project_id": "kid-learning-english",
+    "storage_bucket": "kid-learning-english.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188084953060:android:b636074db3189a0f45f1f1",
+        "android_client_info": {
+          "package_name": "com.devhue97.kidenglish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188084953060-3kp0rc9qlhrjk48508bbpiknct8ki859.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devhue97.kidenglish",
+            "certificate_hash": "bcb2798daf89a5c76f63f17313de25fe0d640348"
+          }
+        },
+        {
+          "client_id": "188084953060-r909vcheq98nnv1jt9ug8jp7gice8ufq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-7Vc8mYo9hHzaQT7g6c80hGk5GatI_4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188084953060-r909vcheq98nnv1jt9ug8jp7gice8ufq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
