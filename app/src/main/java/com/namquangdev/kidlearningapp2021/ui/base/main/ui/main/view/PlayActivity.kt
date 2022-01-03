@@ -1,6 +1,7 @@
 package com.namquangdev.kidlearningapp2021.ui.base.main.ui.main.view
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -74,6 +75,15 @@ class PlayActivity : AppCompatActivity(), ClickListener {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(viewDialog)
         dialog.avt_dialog.setImageResource(collection.img)
+        dialog.card_learn.setOnClickListener {
+            clickLearn(collection.nameCard)
+        }
         dialog.show()
+    }
+
+    private fun clickLearn(titleName: String) {
+        val intentLearn = Intent(this, LearnActivity::class.java)
+        intentLearn.putExtra(LearnActivity.LEARN, titleName)
+        startActivity(intentLearn)
     }
 }
