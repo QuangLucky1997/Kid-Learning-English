@@ -1,6 +1,8 @@
 package com.namquangdev.kidlearningapp2021.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.provider.ContactsContract
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.namquangdev.kidlearningapp2021.R
 import com.namquangdev.kidlearningapp2021.`interface`.ClickListener
 import com.namquangdev.kidlearningapp2021.data.model.Collection
@@ -18,8 +21,8 @@ import kotlinx.android.synthetic.main.custom_recycle_view_learning.view.*
 
 class AdapterSlideLearn(
     private val context: Context,
-    private val listLearn: List<DataLearn>,
-) : RecyclerView.Adapter<AdapterSlideLearn.LearnHolder>() {
+    ) : RecyclerView.Adapter<AdapterSlideLearn.LearnHolder>() {
+    private  var listLearn= emptyList<DataLearn>()
     class LearnHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LearnHolder {
@@ -31,8 +34,15 @@ class AdapterSlideLearn(
 
     override fun onBindViewHolder(holder: LearnHolder, position: Int) {
         val listData = listLearn[position]
-        Glide.with(context).load(listData.url).into(holder.itemView.img_collection)
+        Glide.with(context).load(listData.url).diskCacheStrategy(DiskCacheStrategy.AUTOMATIC).into(holder.itemView.image_collection)
         holder.itemView.text_name.text = listData.name
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setDataRecycleView(listLearnData: List<DataLearn>) {
+        this.listLearn = listLearnData
+        notifyDataSetChanged()
+
     }
 
     override fun getItemCount(): Int {

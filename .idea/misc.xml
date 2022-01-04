@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/activity_learn.xml" value="0.36666666666666664" />
-        <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/custom_learn.xml" value="0.36666666666666664" />
+        <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/activity_play.xml" value="0.36666666666666664" />
+        <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
+        <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/custom_learn.xml" value="0.31565656565656564" />
         <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/custom_recycle_view_learning.xml" value="0.36666666666666664" />
         <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/KidLearningApp2021/app/src/main/res/layout/fragment_learn.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

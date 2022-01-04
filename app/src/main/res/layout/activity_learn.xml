@@ -31,19 +31,18 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleViewLearn"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/group_toolbar" />
-
+   <androidx.viewpager2.widget.ViewPager2
+       app:layout_constraintTop_toBottomOf="@+id/group_toolbar"
+       android:id="@+id/viewPaperLearn"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
 
     <RelativeLayout
+        android:background="@null"
         android:layout_marginTop="@dimen/dp_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/recycleViewLearn">
+        app:layout_constraintTop_toBottomOf="@+id/viewPaperLearn">
 
         <ImageView
             android:id="@+id/img_volumn"
@@ -61,7 +60,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_30"
-            app:cardBackgroundColor="#F6BE17"
+            app:cardBackgroundColor="#F84911"
             app:cardCornerRadius="@dimen/dp_12">
 
             <ImageView
@@ -79,7 +78,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/dp_30"
-            app:cardBackgroundColor="#F6BE17"
+            app:cardBackgroundColor="#F84911"
             app:cardCornerRadius="@dimen/dp_12">
 
             <ImageView

@@ -1,15 +1,15 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-   id 'kotlin-android-extensions'
-    id 'com.google.gms.google-services'
-}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.namquangdev.kidlearningapp2021"
+        applicationId "com.devhue97.kidenglish"
         minSdk 29
         targetSdk 31
         versionCode 1
@@ -38,25 +38,37 @@ dependencies {
     //slider library
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //LifeCycle
-    implementation 'androidx.lifecycle:lifecycle-common:2.4.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-common:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'android.arch.lifecycle:extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.0'
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+
 
     implementation 'com.firebaseui:firebase-ui-database:4.3.2'
     //Coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2-native-mt'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
     implementation 'android.arch.lifecycle:viewmodel:1.1.1'
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+    implementation 'androidx.core:core-ktx:1.5.0'
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
 
     implementation platform('com.google.firebase:firebase-bom:29.0.3')
 
 
-    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-database'
+
+
+
+
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+
 
 
     implementation 'androidx.core:core-ktx:1.7.0'
